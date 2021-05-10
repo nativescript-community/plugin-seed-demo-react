@@ -1,30 +1,23 @@
-import * as React from "react";
+import * as React from 'react';
 import { BaseNavigationContainer } from '@react-navigation/core';
-import { stackNavigatorFactory } from "react-nativescript-navigation";
-import { HomeScreen } from "./HomeScreen";
-import { SecondaryScreen } from "./SecondaryScreen";
+import { stackNavigatorFactory } from 'react-nativescript-navigation';
+import { Menu } from './Menu';
+import { demos } from '../../../demo-snippets/react/install';
 
 const StackNavigator = stackNavigatorFactory();
 
 export const mainStackNavigator = () => (
     <BaseNavigationContainer>
         <StackNavigator.Navigator
-            initialRouteName="Home"
+            initialRouteName="React Demo"
             screenOptions={{
-                headerStyle: {
-                    backgroundColor: "white",
-                },
-                headerShown: true,
+                headerShown: true
             }}
         >
-            <StackNavigator.Screen
-                name="Home"
-                component={HomeScreen}
-            />
-            <StackNavigator.Screen
-                name="Secondary"
-                component={SecondaryScreen}
-            />
+            <StackNavigator.Screen name="React Demo" component={Menu} />
+            {demos.map((demo) => (
+                <StackNavigator.Screen key={demo.path} name={demo.path} component={demo.component} />
+            ))}
         </StackNavigator.Navigator>
     </BaseNavigationContainer>
 );
