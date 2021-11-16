@@ -5,7 +5,6 @@
     "author": "Jamie Birch <14055146+shirakaba@users.noreply.github.com>",
     "main": "src/app.ts",
     "scripts": {
-        "preinstall": "node preinstall.js",
         "postinstall": "patch-package",
         "type-check": "tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch"
