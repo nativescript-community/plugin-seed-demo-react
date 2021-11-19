@@ -3,7 +3,7 @@
     "version": "8.0.2",
     "description": "NativeScript Application",
     "author": "Jamie Birch <14055146+shirakaba@users.noreply.github.com>",
-    "main": "src/app.ts",
+    "main": "src/app",
     "scripts": {
         "postinstall": "patch-package",
         "type-check": "tsc --noEmit",
@@ -40,6 +40,7 @@
     "dependencies": {
         "@nativescript/core": "~8.1.1",
         "@nativescript/theme": "~3.0.1",
+        "@nativescript-community/template-snippet": "file:../demo-snippets",
         "@react-navigation/core": "^5.15.3",
         "react": "~16.13.1",
         "react-nativescript": "^3.0.0-beta.3",
@@ -48,11 +49,11 @@
     },
     "devDependencies": {
         "@nativescript/android": "8.1.1",
+        "@nativescript/ios": "6.5.4",
         "@nativescript/types": "8.1.1",
         "@nativescript/webpack": "~5.0.0",
         "@pmmmwh/react-refresh-webpack-plugin": "~0.4.0-beta.5",
         "@types/react": "16.9.34",
-        "fs-extra": "~10.0.0",
         "patch-package": "~6.2.2",
         "typescript": "~4.2.0"
     },

@@ -1,5 +1,6 @@
 const webpack = require('@nativescript/webpack');
 const fs = require('fs');
+const { resolve } = require('path');
 
 module.exports = (env) => {
     if (fs.existsSync('../demo-snippets/assets')) {
@@ -25,31 +26,10 @@ module.exports = (env) => {
 
     webpack.init(env);
 
-    const projectPath = webpack.Utils.project.getProjectRootPath();
-    const packagesPath = projectPath.substring(0, projectPath.lastIndexOf('/')) + '/packages';
-
-    fs.readdirSync(packagesPath).forEach(file => {
-        const package = require(`${packagesPath}/${file}/package.json`);
-
-        webpack.Utils.addCopyRule({
-            from: `${packagesPath}/${file}`,
-            to: package.name
-        })
-
-        if ('dependencies' in package) {
-            for (const dependency of Object.keys(package.dependencies)) {
-                console.log(`Copying dependency "${dependency}" to demo`)
-                webpack.Utils.addCopyRule({
-                    from: `${projectPath.substring(0, projectPath.lastIndexOf('/'))}/node_modules/${dependency}`,
-                    to: dependency
-                })
-            }
-        }
-    });
-
     const { redirect } = env;
 
     webpack.chainWebpack((config) => {
+        config.resolve.modules.add(resolve(__dirname, '../demo-snippets/node_modules'));
         config.plugin('DefinePlugin').tap((args) => {
             if (redirect) {
                 Object.assign(args[0], {
@@ -57,7 +37,7 @@ module.exports = (env) => {
                 });
             } else {
                 Object.assign(args[0], {
-                    demoRedirect: JSON.stringify("")
+                    demoRedirect: JSON.stringify('')
                 });
             }
             return args;
