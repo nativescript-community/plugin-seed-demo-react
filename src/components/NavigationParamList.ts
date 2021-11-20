@@ -1,4 +1,4 @@
-export interface MainStackParamList {
+export type MainStackParamList = {
     menu: {};
     development: {};
 }
