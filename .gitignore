@@ -21,6 +21,7 @@ yarn-error.log*
 tmp/
 typings/
 package-lock.json
+pnpm-lock.yaml
 
 # Visual Studio Code
 .vscode/*
