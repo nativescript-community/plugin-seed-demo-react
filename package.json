@@ -59,10 +59,5 @@
     },
     "gitHead": "1350d382fb4b0ed4c6e9685df909518b2688e004",
     "readme": "NativeScript Application",
-    "private": "true",
-    "dependenciesMeta": {
-        "@nativescript-community/template-snippet": {
-            "injected": true
-        }
-    }
+    "private": "true"
 }
