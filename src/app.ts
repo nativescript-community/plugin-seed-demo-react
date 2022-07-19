@@ -12,7 +12,7 @@ purpose of the file is to pass control to the app’s first module.
 import * as ReactNativeScript from 'react-nativescript';
 import { mainStackNavigator as AppContainer } from './components/Navigator';
 
-import { installPlugin } from '../../demo-snippets/react/install';
+import { installPlugin } from '@nativescript-community/template-snippet/react/install';
 installPlugin();
 
 ReactNativeScript.start(React.createElement(AppContainer, {}, null));
