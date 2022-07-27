@@ -38,7 +38,7 @@
         "template"
     ],
     "dependencies": {
-        "@nativescript-community/template-snippet": "file:../demo-snippets",
+        "@nativescript-community/template-snippet": "link:../demo-snippets",
         "@nativescript/core": "~8.2.1",
         "@nativescript/theme": "~3.0.2",
         "@react-navigation/core": "~5.15.5",
