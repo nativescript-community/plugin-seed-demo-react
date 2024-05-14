@@ -16,7 +16,7 @@
             "*": ["node_modules/*"]
         }
     },
-    "include": ["./src/**/*.tsx?", "../demo-react"],
+    "include": ["./src/**/*.tsx?", "../demo-snippets/react"],
     "files": ["./references.d.ts"],
     "exclude": ["node_modules", "platforms"]
 }
