@@ -6,7 +6,6 @@
     "author": "Jamie Birch <14055146+shirakaba@users.noreply.github.com>",
     "main": "src/app",
     "scripts": {
-        "postinstall": "patch-package",
         "type-check": "tsc --noEmit",
         "type-check:watch": "npm run type-check -- --watch"
     },
@@ -39,25 +38,24 @@
         "template"
     ],
     "dependencies": {
-        "@nativescript-community/template-snippet": "0.0.1",
-        "@nativescript/core": "~8.4.1",
-        "@nativescript/theme": "~3.0.2",
-        "@react-navigation/core": "~5.15.5",
-        "react": "^16.14.0",
-        "react-nativescript": "^4.0.0",
+        "@nativescript-community/template-snippet": "*",
+        "@nativescript/core": "8.9.9",
+        "@nativescript/theme": "3.1.0",
+        "@react-navigation/core": "6.4.17",
+        "react": "18.3.1",
+        "react-nativescript": "5.0.0",
         "react-nativescript-navigation": "4.0.0",
-        "react-refresh": "~0.14.0"
+        "react-refresh": "~0.18.0"
     },
     "devDependencies": {
-        "@akylas/nativescript": "~8.4.1",
-        "@nativescript/android": "~8.4.0",
-        "@nativescript/ios": "8.4.0",
-        "@nativescript/types": "~8.4.0",
-        "@nativescript/webpack": "~5.0.12",
-        "@pmmmwh/react-refresh-webpack-plugin": "~0.5.10",
-        "@types/react": "16.9.34",
-        "patch-package": "~6.5.0",
-        "typescript": "~4.8.4"
+        "@akylas/nativescript": "8.9.10",
+        "@nativescript/android": "8.9.2",
+        "@nativescript/ios": "8.9.4",
+        "@nativescript/types": "8.9.1",
+        "@nativescript/webpack": "5.0.24",
+        "@pmmmwh/react-refresh-webpack-plugin": "0.6.1",
+        "@types/react": "npm:types-react-without-jsx-intrinsics@^18.0.17",
+        "typescript": "5.9.3"
     },
     "gitHead": "1350d382fb4b0ed4c6e9685df909518b2688e004",
     "readme": "NativeScript Application"
